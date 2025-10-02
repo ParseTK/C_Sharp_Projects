@@ -37,28 +37,28 @@ class TestClassifiedAd
 
 class ClassifiedAd
 {
-	private string Category;
-	private int NumWords;
+	private string _category;
+	private int _numWords;
 
 	public string Category
 	{
-		get => Category;
-		set => Category = value;
+		get => _category;
+		set => _category = value;
 	}
 
 	public int NumWords
 	{
-		get => NumWords;
-		set => NumWords = value;
+		get => _numWords;
+		set => _numWords = value;
 	}
 
-	public float GetPrice => NumWords * 0.09f; // readonly <- get
+	public float GetPrice => _numWords * 0.09f; // readonly <- get
 
 	public ClassifiedAd(string category, int numWords) =>
-		(Category, NumWords) = (category, numWords);
+		(_category, _numWords) = (category, numWords);
 
 	public string OutputAd() =>
-        $"The classified ad with {NumWords} words in category {Category} costs {GetPrice.ToString("C", CultureInfo.GetCultureInfo("en-US"))}";
+		$"The classified ad with {_numWords} words in category {_category} costs {GetPrice.ToString("C", CultureInfo.GetCultureInfo("en-US"))}";
 }
 /*
 class OutputAd
