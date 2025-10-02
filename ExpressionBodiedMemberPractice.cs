@@ -58,7 +58,7 @@ class ClassifiedAd
 		(Category, NumWords) = (category, numWords);
 
 	public string OutputAd() =>
-        $"The classified ad with {NumWords} words in category {Category} costs {Price.ToString("C", CultureInfo.GetCultureInfo("en-US"))}";
+        $"The classified ad with {NumWords} words in category {Category} costs {GetPrice.ToString("C", CultureInfo.GetCultureInfo("en-US"))}";
 }
 /*
 class OutputAd
