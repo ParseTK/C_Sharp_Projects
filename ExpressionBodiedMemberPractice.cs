@@ -52,7 +52,7 @@ class ClassifiedAd
 		set => _numWords = value;
 	}
 
-	public float GetPrice => _numWords * 0.09f; // readonly <- get
+	public float GetPrice => _numWords * 0.09f; // readonly <- get. Probably should be a double.
 
 	public ClassifiedAd(string category, int numWords) =>
 		(_category, _numWords) = (category, numWords);
