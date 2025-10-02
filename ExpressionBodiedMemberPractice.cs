@@ -52,7 +52,7 @@ class ClassifiedAd
 		set => NumWords = value;
 	}
 
-	public float Price => NumWords * 0.09f; // readonly <- get
+	public float GetPrice => NumWords * 0.09f; // readonly <- get
 
 	public ClassifiedAd(string category, int numWords) =>
 		(Category, NumWords) = (category, numWords);
